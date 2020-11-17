@@ -1,8 +1,6 @@
 ﻿using System;
-using NUnit.Framework;
-using WordWrap;
 
-namespace Kata1
+namespace WordWrap
 {
     class Program
     {
