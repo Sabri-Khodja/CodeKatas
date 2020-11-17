@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplaceDigits", "ReplaceDig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharacterCount", "CharacterCount\CharacterCount.csproj", "{5D696CAF-3F52-4EC0-A529-CC0B7BFC21B9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixMultiplication", "MatrixMultiplication\MatrixMultiplication.csproj", "{B5379E9A-F8AF-4A91-9713-E3620696ACCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5D696CAF-3F52-4EC0-A529-CC0B7BFC21B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D696CAF-3F52-4EC0-A529-CC0B7BFC21B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D696CAF-3F52-4EC0-A529-CC0B7BFC21B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
