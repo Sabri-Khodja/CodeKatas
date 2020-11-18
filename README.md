@@ -1,2 +1,2 @@
 # CodeKatas
-Code Katas Repository
+A collection of code Katas. Implemented preferably using TDD.
