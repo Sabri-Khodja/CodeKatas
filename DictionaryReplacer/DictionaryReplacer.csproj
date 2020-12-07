@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>Kata1.Program</StartupObject>
+    <StartupObject>DictionaryReplacer.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
