@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharacterCount", "Character
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixMultiplication", "MatrixMultiplication\MatrixMultiplication.csproj", "{B5379E9A-F8AF-4A91-9713-E3620696ACCC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictionaryReplacer", "DictionaryReplacer\DictionaryReplacer.csproj", "{2C8BC880-72ED-429F-9D5E-B7DFAB71200C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Range", "Range\Range.csproj", "{251806A8-7246-4170-B691-2A62A58642E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5379E9A-F8AF-4A91-9713-E3620696ACCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8BC880-72ED-429F-9D5E-B7DFAB71200C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8BC880-72ED-429F-9D5E-B7DFAB71200C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8BC880-72ED-429F-9D5E-B7DFAB71200C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8BC880-72ED-429F-9D5E-B7DFAB71200C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251806A8-7246-4170-B691-2A62A58642E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251806A8-7246-4170-B691-2A62A58642E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251806A8-7246-4170-B691-2A62A58642E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251806A8-7246-4170-B691-2A62A58642E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
