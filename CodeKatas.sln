@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictionaryReplacer", "Dicti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Range", "Range\Range.csproj", "{251806A8-7246-4170-B691-2A62A58642E0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPNCalculator", "RPNCalculator\RPNCalculator.csproj", "{9088AAA4-ECFD-4367-9AB4-696C2632E1F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{251806A8-7246-4170-B691-2A62A58642E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{251806A8-7246-4170-B691-2A62A58642E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251806A8-7246-4170-B691-2A62A58642E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9088AAA4-ECFD-4367-9AB4-696C2632E1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9088AAA4-ECFD-4367-9AB4-696C2632E1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9088AAA4-ECFD-4367-9AB4-696C2632E1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9088AAA4-ECFD-4367-9AB4-696C2632E1F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
