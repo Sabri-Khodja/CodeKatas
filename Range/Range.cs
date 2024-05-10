@@ -1,6 +1,4 @@
 ﻿
-using System.Collections.Generic;
-
 namespace Range
 {
     public class Range
@@ -16,10 +14,8 @@ namespace Range
             {
                 return LowerEnd;
             }
-            else
-            {
-                return LowerEnd + 1;
-            }
+
+            return LowerEnd + 1;
         }
 
         public int GetUpperValue()
@@ -28,12 +24,9 @@ namespace Range
             {
                 return UpperEnd;
             }
-            else
-            {
-                return UpperEnd - 1;
-            }
-        }
 
+            return UpperEnd - 1;
+        }
 
         public Range(int lowerEnd, bool lowerEndIncluded, int upperEnd, bool upperEndIncluded)
         {
@@ -70,7 +63,6 @@ namespace Range
 
             return results;
         }
-
 
         public bool ContainsRange(Range range)
         {
