@@ -25,12 +25,8 @@ namespace StringCompression
                     numberOfConsecutiveChars++;
                 }
                 else
-                {
-                    chars[writeIndex++] = previousChar;
-                    if (numberOfConsecutiveChars > 1)
-                    {
-                        chars[writeIndex++] = char.Parse(numberOfConsecutiveChars.ToString());
-                    }
+                { 
+                    writeIndex = WriteCompressedCharsGroup(chars, writeIndex, previousChar, numberOfConsecutiveChars);
                     
                     numberOfConsecutiveChars = 1;
                 }
@@ -38,14 +34,21 @@ namespace StringCompression
                 previousChar = currentChar;
             }
             
-            chars[writeIndex++] = previousChar;
-            if (numberOfConsecutiveChars > 1)
-            {
-                chars[writeIndex++] = char.Parse(numberOfConsecutiveChars.ToString());
-            }
-            
+            writeIndex = WriteCompressedCharsGroup(chars, writeIndex, previousChar, numberOfConsecutiveChars);
+
             return writeIndex;
         }
 
+        private static int WriteCompressedCharsGroup(char[] chars, int writeIndex, char charToWrite,
+            int numberOfOccurences)
+        {
+            chars[writeIndex++] = charToWrite;
+            if (numberOfOccurences > 1)
+            {
+                chars[writeIndex++] = char.Parse(numberOfOccurences.ToString());
+            }
+
+            return writeIndex;
+        }
     }
 }
