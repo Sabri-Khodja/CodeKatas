@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace StringCompression
@@ -45,7 +46,10 @@ namespace StringCompression
             chars[writeIndex++] = charToWrite;
             if (numberOfOccurences > 1)
             {
-                chars[writeIndex++] = char.Parse(numberOfOccurences.ToString());
+                foreach (var c in numberOfOccurences.ToString())
+                {
+                    chars[writeIndex++] = c;
+                }
             }
 
             return writeIndex;

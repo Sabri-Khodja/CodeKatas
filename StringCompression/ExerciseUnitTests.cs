@@ -60,5 +60,18 @@ namespace StringCompression
             var compressedChars = input.Take(count).ToArray();
             Assert.AreEqual("a2b2c3", new string(compressedChars));
         }
+        
+        //4th iteration
+        [Test]
+        public void ReturnsCompressedStringLengthAndCompressedStringWhenMoreThan10ConsecutiveCharsInInputStringTest()
+        {
+            var input = new char[] { 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'c', 'c'  };
+            
+            var count = Exercise.Compress(input);
+
+            Assert.AreEqual(6, count);
+            var compressedChars = input.Take(count).ToArray();
+            Assert.AreEqual("ab12c2", new string(compressedChars));
+        }
     }
 }
