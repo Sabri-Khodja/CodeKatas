@@ -13,6 +13,17 @@ namespace StringCompression
                 return 0;
             }
 
+            var previousChar = chars[0];
+            for(int i = 1; i < chars.Length; i++)
+            {
+                var currentChar = chars[i];
+                if (currentChar == previousChar)
+                {
+                    throw new ArgumentException("Case not supported");
+                }
+
+                previousChar = currentChar;
+            }
             return chars.Length;
         }
 
