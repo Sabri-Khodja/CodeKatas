@@ -23,10 +23,17 @@ namespace GameOfLife
             {
                 for (int j = 0; j < numberOfColumns; j++)
                 {
+                    var numberOfLivingNeighbors = ComputeNumberOfLivingNeighbors(board, i, j, numberOfRows, numberOfColumns);
                     if (board[i][j] == 1)
                     {
-                        var numberOfLivingNeighbors = ComputeNumberOfLivingNeighbors(board, i, j, numberOfRows, numberOfColumns);
                         if (numberOfLivingNeighbors is 2 or 3)
+                        {
+                            outputBoard[i, j] = 1;
+                        }
+                    }
+                    else
+                    {
+                        if (numberOfLivingNeighbors == 3)
                         {
                             outputBoard[i, j] = 1;
                         }
