@@ -7,7 +7,7 @@ namespace StringCompression
     {
         public static int Compress(char[] chars)
         {
-
+            return 0;
         }
 
     }

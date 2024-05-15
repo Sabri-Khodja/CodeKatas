@@ -19,6 +19,18 @@ namespace StringCompression
         {
 
         }
-        
+      
+
+        //1st iteration
+        [Test]
+        public void Returns0AndEmptyStringyWhenEmptyStringTest()
+        {
+            var input = new char[] {};
+
+            var count = Exercise.Compress(input);
+
+            Assert.AreEqual(0, count);
+            Assert.AreEqual(0, input.Length);
+        }
     }
 }
