@@ -38,7 +38,7 @@ namespace GameOfLife
             
             for (int i = 0; i < grid1.Length; i++)
             {
-                for (int j = 0; j < grid1.Length; j++)
+                for (int j = 0; j < grid1[0].Length; j++)
                 {
                     if (grid1[i][j] != grid2[i][j])
                     {
@@ -79,7 +79,7 @@ namespace GameOfLife
         {
             var input = new int[][]
             {
-                [1 , 0 , 0],
+                [1 , 0 , 1],
                 [1 , 1 , 0],
                 [1 , 1 , 1],
             };
@@ -112,6 +112,50 @@ namespace GameOfLife
                 [1 , 1 , 0],
                 [0 , 0 , 1],
                 [1 , 0 , 1],
+            };
+            
+            Exercise.GameOfLife(input);
+            
+            Assert.IsTrue(CompareGrid(input, expectedOutput));
+        }
+        
+        [Test]
+        public void ReturnsSurvivingAndResurectingCellsWhenInputGridReference1Test()
+        {
+            var input = new int[][]
+            {
+                [0 , 1 , 0],
+                [0 , 0 , 1],
+                [1 , 1 , 1],
+                [0 , 0 , 0],
+            };
+            
+            var expectedOutput = new int[][]
+            {
+                [0 , 0 , 0],
+                [1 , 0 , 1],
+                [0 , 1 , 1],
+                [0 , 1 , 0],
+            };
+            
+            Exercise.GameOfLife(input);
+            
+            Assert.IsTrue(CompareGrid(input, expectedOutput));
+        }
+        
+        [Test]
+        public void ReturnsSurvivingAndResurectingCellsWhenInputGridReference2Test()
+        {
+            var input = new int[][]
+            {
+                [1 , 1 ],
+                [1 , 0 ],
+            };
+            
+            var expectedOutput = new int[][]
+            {
+                [1 , 1],
+                [1 , 1],
             };
             
             Exercise.GameOfLife(input);

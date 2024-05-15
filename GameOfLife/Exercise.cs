@@ -7,21 +7,14 @@ namespace GameOfLife
     {
         public static void GameOfLife(int[][] board)
         {
-            var allZeros = board.Select(e => e).SelectMany(e => e).All(i => i == 0);
-
-            if (allZeros)
-            {
-                return;
-            }
-
             var numberOfRows = board.Length;
             var numberOfColumns = board[0].Length;
             
             var outputBoard = new int[numberOfRows, numberOfColumns];
             
-            for (int i = 0; i < numberOfRows; i++)
+            for (var i = 0; i < numberOfRows; i++)
             {
-                for (int j = 0; j < numberOfColumns; j++)
+                for (var j = 0; j < numberOfColumns; j++)
                 {
                     var numberOfLivingNeighbors = ComputeNumberOfLivingNeighbors(board, i, j, numberOfRows, numberOfColumns);
                     if (board[i][j] == 1)
@@ -41,9 +34,9 @@ namespace GameOfLife
                 }
             }
 
-            for (int i = 0; i < numberOfRows; i++)
+            for (var i = 0; i < numberOfRows; i++)
             {
-                for (int j = 0; j < numberOfColumns; j++)
+                for (var j = 0; j < numberOfColumns; j++)
                 {
                     board[i][j] = outputBoard[i, j];
                 }
@@ -58,9 +51,9 @@ namespace GameOfLife
             int higherColumn = Math.Min(column + 1, numberOfColumns - 1);
 
             var count = 0;
-            for (int i = lowerRow; i <= higherRow; i++)
+            for (var i = lowerRow; i <= higherRow; i++)
             {
-                for (int j = lowerColumn; j <= higherColumn; j++)
+                for (var j = lowerColumn; j <= higherColumn; j++)
                 {
                     count += board[i][j];
                 }
