@@ -72,6 +72,29 @@ namespace GameOfLife
             
             Assert.IsTrue(CompareGrid(input, expectedOutput));
         }
+        
+        //2nd iteration
+        [Test]
+        public void ReturnsSurvivingCellsWhen2Or3LivingNeighborsInInputGridTest()
+        {
+            var input = new int[][]
+            {
+                [1 , 0 , 0],
+                [1 , 1 , 0],
+                [1 , 1 , 1],
+            };
+            
+            var expectedOutput = new int[][]
+            {
+                [1 , 0 , 0],
+                [0 , 0 , 0],
+                [1 , 0 , 1],
+            };
+            
+            Exercise.GameOfLife(input);
+            
+            Assert.IsTrue(CompareGrid(input, expectedOutput));
+        }
        
     }
 }
