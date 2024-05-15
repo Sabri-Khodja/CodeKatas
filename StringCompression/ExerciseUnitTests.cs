@@ -20,7 +20,6 @@ namespace StringCompression
         {
 
         }
-      
 
         //1st iteration
         [Test]
