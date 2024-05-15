@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 
 namespace StringCompression
@@ -45,6 +46,19 @@ namespace StringCompression
             Assert.AreEqual(6, count);
             Assert.AreEqual(6, input.Length);
             Assert.AreEqual(inputAsString, new string(input));
+        }
+        
+        //3rd iteration
+        [Test]
+        public void ReturnsCompressedStringLengthAndCompressedStringWhenConsecutiveCharsInInputStringTest()
+        {
+            var input = new char[] { 'a', 'a', 'b', 'b', 'c', 'c', 'c' };
+            
+            var count = Exercise.Compress(input);
+
+            Assert.AreEqual(6, count);
+            var compressedChars = input.Take(count).ToArray();
+            Assert.AreEqual("a2b2c3", new string(compressedChars));
         }
     }
 }

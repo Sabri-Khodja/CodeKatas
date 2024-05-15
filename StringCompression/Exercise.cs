@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace StringCompression
 {
@@ -14,17 +15,36 @@ namespace StringCompression
             }
 
             var previousChar = chars[0];
+            var numberOfConsecutiveChars = 1;
+            var writeIndex = 0;
             for(int i = 1; i < chars.Length; i++)
             {
                 var currentChar = chars[i];
                 if (currentChar == previousChar)
                 {
-                    throw new ArgumentException("Case not supported");
+                    numberOfConsecutiveChars++;
+                }
+                else
+                {
+                    chars[writeIndex++] = previousChar;
+                    if (numberOfConsecutiveChars > 1)
+                    {
+                        chars[writeIndex++] = char.Parse(numberOfConsecutiveChars.ToString());
+                    }
+                    
+                    numberOfConsecutiveChars = 1;
                 }
 
                 previousChar = currentChar;
             }
-            return chars.Length;
+            
+            chars[writeIndex++] = previousChar;
+            if (numberOfConsecutiveChars > 1)
+            {
+                chars[writeIndex++] = char.Parse(numberOfConsecutiveChars.ToString());
+            }
+            
+            return writeIndex;
         }
 
     }
