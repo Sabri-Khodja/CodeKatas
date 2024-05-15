@@ -14,15 +14,18 @@ namespace GameOfLife
                 return;
             }
 
-            var outputBoard = new int[board.Length, board[0].Length];
+            var numberOfRows = board.Length;
+            var numberOfColumns = board[0].Length;
             
-            for (int i = 0; i < board.Length; i++)
+            var outputBoard = new int[numberOfRows, numberOfColumns];
+            
+            for (int i = 0; i < numberOfRows; i++)
             {
-                for (int j = 0; j < board[0].Length; j++)
+                for (int j = 0; j < numberOfColumns; j++)
                 {
                     if (board[i][j] == 1)
                     {
-                        var numberOfLivingNeighbors = ComputeNumberOfLivingNeighbors(board, i, j);
+                        var numberOfLivingNeighbors = ComputeNumberOfLivingNeighbors(board, i, j, numberOfRows, numberOfColumns);
                         if (numberOfLivingNeighbors is 2 or 3)
                         {
                             outputBoard[i, j] = 1;
@@ -31,21 +34,21 @@ namespace GameOfLife
                 }
             }
 
-            for (int i = 0; i < board.Length; i++)
+            for (int i = 0; i < numberOfRows; i++)
             {
-                for (int j = 0; j < board[0].Length; j++)
+                for (int j = 0; j < numberOfColumns; j++)
                 {
                     board[i][j] = outputBoard[i, j];
                 }
             }
         }
         
-        private static int ComputeNumberOfLivingNeighbors(int[][] board, int row, int column)
+        private static int ComputeNumberOfLivingNeighbors(int[][] board, int row, int column, int numberOfRows, int numberOfColumns)
         {
             int lowerRow = Math.Max(row - 1, 0);
-            int higherRow = Math.Min(row + 1, board.Length - 1);
+            int higherRow = Math.Min(row + 1, numberOfRows - 1);
             int lowerColumn = Math.Max(column - 1, 0);
-            int higherColumn = Math.Min(column + 1, board[0].Length - 1);
+            int higherColumn = Math.Min(column + 1, numberOfColumns - 1);
 
             var count = 0;
             for (int i = lowerRow; i <= higherRow; i++)
