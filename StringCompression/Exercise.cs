@@ -13,7 +13,7 @@ namespace StringCompression
                 return 0;
             }
 
-            throw new ArgumentOutOfRangeException($"Case not handled {new string(chars)}");
+            return chars.Length;
         }
 
     }
