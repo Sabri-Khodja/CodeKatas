@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 
 namespace StringCompression
@@ -7,7 +8,12 @@ namespace StringCompression
     {
         public static int Compress(char[] chars)
         {
-            return 0;
+            if (chars.Length == 0)
+            {
+                return 0;
+            }
+
+            throw new ArgumentOutOfRangeException($"Case not handled {new string(chars)}");
         }
 
     }
