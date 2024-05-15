@@ -18,7 +18,7 @@ namespace StringCompression
             var previousChar = chars[0];
             var numberOfConsecutiveChars = 1;
             var writeIndex = 0;
-            for(int i = 1; i < chars.Length; i++)
+            for(var i = 1; i < chars.Length; i++)
             {
                 var currentChar = chars[i];
                 if (currentChar == previousChar)
@@ -44,12 +44,10 @@ namespace StringCompression
             int numberOfOccurences)
         {
             chars[writeIndex++] = charToWrite;
-            if (numberOfOccurences > 1)
+            if (numberOfOccurences <= 1) return writeIndex;
+            foreach (var c in numberOfOccurences.ToString())
             {
-                foreach (var c in numberOfOccurences.ToString())
-                {
-                    chars[writeIndex++] = c;
-                }
+                chars[writeIndex++] = c;
             }
 
             return writeIndex;
